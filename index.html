@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/723a04383b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Sticky Header</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Josefin sans',sans-serif;
+        }
+        /* body {
+            font-family: 'Josefin Sans', sans-serif;
+        }
+        .navbar {
+            font-size: 1.2rem;
+            background: rgba(0,0,0,0.9);
+            border: 1px solid rgba(0,0,0,0.2);
+            border-bottom: 10px;
+        }
+        .main-nav {
+            list-style: none;
+        }
+        .nav-links,
+        .logo {
+            text-decoration: none;
+            color: rgba(255,255,255,0.7);
+        }
+        .main-nav li {
+            text-align: center;
+            margin: 17px auto;
+        }
+        .logo {
+            display: inline-block;
+            font-size: 22px;
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+        .navbar-toggle {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+            color: rgba(255,255,255,0.8);
+            font-size: 24px;
+        }
+        .main-nav {
+            list-style-type: none;
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        @media all and (min-width:768px){
+            body {
+                margin-top: 75px;
+            }
+            .navbar {
+                display: flex;
+                justify-content: space-around;
+                padding-bottom: 0;
+                height: 70px;
+                align-items: center;
+                position: fixed;
+                top: 0;
+                z-index: 99;
+                width: 100%;
+            }
+            .main-nav {
+                display: flex;
+                margin-right: 30px;
+                flex-direction: row;
+                justify-content: flex-end;
+            }
+            .main-nav li {
+                margin: 0;
+            }
+            .nav-links {
+                margin-left: 40px;
+            }
+            .logo {
+                margin-top: 0;
+            }
+            .navbar-toggle {
+                display: none;
+            }
+            .logo:hover,
+            .nav-links:hover {
+                color: rgba(255,255,255,1);
+            }
+            .page {
+                width: 70%;
+                margin:  0 auto;
+            }
+        } */
+        
+
+        /*LANRE METHOD */
+
+            *{
+                margin: 0;
+                padding:0;
+                box-sizing: border-box;
+            }
+            body {
+                margin-top:77px;
+            }
+            .page {
+                width: 70%;
+                margin: 0 auto;
+            }
+            .navbar {
+                position: fixed;
+                top: 0;
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+                background: rgba(0,0,0,0.9);
+                height: 70px;
+            }
+            .main-nav {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                list-style: none;
+                margin-right: 3rem;
+            }
+            .main-nav a{
+                text-decoration: none;
+                color: rgba(245,245,245,0.8);
+                margin: 0 1.5rem;
+                font-size: 1.4rem;
+                transition: all .2 ease;
+            }
+            .main-nav a:hover{
+                color: orange;
+            }
+            .logo {
+                display: inline-block;
+                font-size: 2rem;
+                margin-top: 1rem;
+                text-decoration: none;
+                color: rgba(255,255,245,0.8);
+            }
+            .navbar-toggle {
+                display: none;
+            }
+
+            @media all and (max-width:600px){
+                .main-nav {
+                    display: none;
+                }
+                .logo {
+                    position: absolute;
+                    left: 2rem;               
+                }
+                .active {
+                    display: block;
+                    margin-top: 70px;
+                    height: 300px;
+                    width: 80%;
+                    background: rgba(0,0,0,0.9);
+                    z-index: 100;
+                    text-align: center;
+                    line-height: 1.8;
+                }
+                .navbar-toggle {
+                    display: block;
+                    position: absolute;
+                    top: 1.4rem;
+                    color: #fff;
+                    right: 40px;
+                    font-size: 1.8rem;
+                    cursor: pointer;
+                }
+            }
+    </style>
+
+</head>
+<body >
+    <nav class="navbar">
+        <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fas fa-bars"></i>
+        </span>
+        <a href="#" class="logo">logo</a>
+        <ul class="main-nav" id="js-menu">
+            <li> <a href="#" class="nav-links">Home</a> </li>
+            <li> <a href="#" class="nav-links">Products</a> </li>
+            <li> <a href="#" class="nav-links">About Us</a> </li>
+            <li> <a href="#" class="nav-links">Contact Us</a> </li>
+            <li> <a href="#" class="nav-links">Blog</a> </li>
+        </ul>
+    </nav>
+    <section class="page">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum vitae aperiam reiciendis vero, eius sapiente consectetur voluptas ducimus facere. Veritatis distinctio optio doloribus dolore consectetur nostrum autem eum pariatur, exercitationem non, magnam quidem repellendus. Suscipit vel quibusdam aut, nemo dolor tenetur facere voluptatem earum? Facere sapiente at ut consectetur illum vitae repellat quo temporibus ab, facilis enim, sint deleniti necessitatibus tenetur consequatur quidem velit rerum veritatis! Dolores, veniam animi, accusamus consequatur quae commodi nemo alias laudantium sit velit fugiat molestiae porro labore blanditiis consequuntur. Asperiores laborum ullam minus, ratione architecto blanditiis fuga! Sit eius amet nisi blanditiis, labore distinctio deserunt cupiditate nostrum similique enim modi consequuntur quaerat repudiandae consequatur et cum suscipit beatae facere illum magni asperiores. Natus, tempore! Natus deleniti ex corporis maxime totam fugit beatae, necessitatibus facere tempora delectus minus possimus quidem velit accusamus corrupti cum explicabo laudantium qui similique voluptatum magni error dolore provident quod. Id vel quaerat ab iste cum sapiente in, ratione eligendi. Libero dignissimos repellat illo incidunt, aliquid magni corporis veritatis eligendi, asperiores temporibus illum delectus. Et eaque magnam molestiae minima maxime iure nesciunt eos vitae recusandae velit pariatur, veritatis animi fuga corporis hic in rerum voluptate consequuntur repellendus placeat asperiores doloremque tempore nemo praesentium. Eos saepe commodi eaque vel beatae perspiciatis eum facere mollitia sunt totam temporibus cumque at harum odio error doloribus, eveniet dignissimos rem ex ab a recusandae soluta! Cupiditate fugit et laborum dignissimos, itaque id labore voluptas eius optio alias repellat minima voluptate! Aperiam a, dolore veritatis provident vitae amet pariatur qui dolor maiores numquam? Voluptatem harum minima ad. Quisquam harum consequatur doloribus veniam libero consequuntur itaque commodi quas, et sed ea quibusdam dolor possimus praesentium quaerat exercitationem quasi molestiae aperiam maiores ducimus laborum explicabo mollitia sequi magnam. Sint nihil maiores tenetur quas et unde omnis error doloribus corporis. Aut rem temporibus et! Voluptatibus et dolor vero alias adipisci quo aliquam minus natus. Officia cum odit vero deleniti ut amet expedita accusantium magni! Quos tempore voluptas, laborum exercitationem dolor impedit blanditiis ipsam magnam animi accusantium maxime atque itaque debitis voluptate asperiores illum consectetur culpa modi laudantium obcaecati nobis numquam. Pariatur provident, explicabo, ducimus dolor praesentium nisi quia natus quam aliquid impedit, consequatur commodi! Sapiente libero neque enim qui! Tempore assumenda possimus id, placeat ad nobis esse sit nisi corporis voluptate eligendi cumque labore dignissimos adipisci? Nemo aliquid ducimus tempora laborum ad officia sed voluptas dolorem in sint aliquam quidem laudantium ratione voluptatum a non commodi aperiam delectus, consequatur, sit placeat quo! Maxime pariatur, ipsum numquam amet ex architecto a. Tenetur vitae velit obcaecati, et ab itaque repellat nobis maxime incidunt blanditiis dignissimos accusantium modi rem. Voluptatem quasi corrupti tenetur enim sit vel incidunt exercitationem officiis molestiae. Inventore, itaque. Quam doloremque natus eveniet voluptas ratione nisi, eaque quidem architecto facilis, excepturi odio ducimus non qui explicabo incidunt dolorem quia porro! Voluptas aut tenetur veniam, veritatis adipisci itaque recusandae dolore dolores, numquam sunt illum unde facilis. Magnam vero dolores, quos ipsam a fugit ullam? Consequuntur repudiandae pariatur quos magnam doloremque est cum cupiditate eius numquam necessitatibus ad quo minus, explicabo molestias delectus harum sapiente dolorum nemo quia laborum veritatis? Distinctio cumque illum vitae aliquid reiciendis eligendi doloribus amet expedita, dignissimos, quibusdam laborum vero ipsum voluptatum dicta quasi et quos autem omnis perferendis modi adipisci minima fugiat sint aperiam! Sint, mollitia. Iste, totam voluptate magni eum harum natus aut debitis officiis, sit fugiat reiciendis mollitia molestiae labore quis tenetur animi esse deleniti voluptas aperiam iure minus. Vel non consequatur quasi obcaecati laboriosam. Ad expedita, illo laborum temporibus esse, reiciendis doloremque earum sapiente quibusdam hic ipsum unde asperiores optio! Eligendi pariatur quos magnam animi perspiciatis omnis eveniet numquam eius asperiores? Debitis fugiat voluptatum dolorum harum iusto quis repellat, quia unde non veritatis! Incidunt itaque doloribus magni totam voluptatibus quaerat fugiat exercitationem tempore, consectetur doloremque qui fugit, vitae minima autem ducimus tempora quis. Consequatur laboriosam odit ex quidem vitae deserunt aliquam quam? Nobis quisquam, temporibus sequi necessitatibus expedita odit suscipit ab repudiandae dolorum culpa, dolores voluptas molestias, esse earum? Aspernatur odio non obcaecati dolores, eos inventore optio et eveniet eum velit natus omnis exercitationem! Optio, necessitatibus? Possimus perferendis sit similique voluptatibus animi natus unde doloremque provident reprehenderit, accusantium consectetur repudiandae accusamus ab quam enim sunt ex ad obcaecati aspernatur. Natus architecto aperiam quisquam modi officia quaerat dicta temporibus. Sapiente et voluptatum incidunt quas culpa provident iusto accusantium placeat ut! Facere qui est dignissimos voluptas ut perspiciatis corrupti rerum eius natus non asperiores quod, itaque, dolore ea pariatur enim officiis magni explicabo exercitationem. Blanditiis possimus laudantium ratione iste hic temporibus doloremque, consequatur natus a nemo tempore, ea adipisci nobis animi itaque amet, excepturi quo accusantium inventore repellendus quibusdam. Fugiat, aperiam. Fuga odio pariatur omnis reiciendis magni aspernatur minima inventore molestias porro architecto, fugit deleniti nam esse placeat beatae eos. Laborum inventore, repudiandae fugit nesciunt repellendus aut asperiores eveniet iure atque voluptatibus eum assumenda esse porro neque debitis dolorum amet! Autem fugiat non veniam inventore eos minus vitae? Asperiores vero ut sapiente in fuga, molestiae dolorem laboriosam architecto quidem quasi accusantium, rem veniam id assumenda, quia consequatur aliquid velit. Nostrum sed exercitationem, laboriosam laborum officiis repellendus dolorem dolor maxime ea odit provident, quo accusantium culpa quas aperiam, molestiae error voluptas doloribus ipsam harum? Voluptatum velit repudiandae facilis quae commodi rerum distinctio non perferendis nobis vitae quos dolor, sint labore harum, voluptas enim dolores ducimus tempore doloribus accusantium omnis! Itaque temporibus natus ab reprehenderit quam explicabo nemo voluptatibus dolorum necessitatibus quibusdam, soluta, aspernatur impedit unde. Quam inventore nobis eum optio soluta eaque sapiente! Quaerat deserunt similique dignissimos aspernatur tempore natus! Modi maiores recusandae, consectetur eos libero officiis voluptates nam! Officiis earum voluptatibus cum eveniet repellendus repellat tempore praesentium vero suscipit? Commodi, tempore, consequuntur consequatur, vitae vel facilis aperiam necessitatibus corrupti eaque possimus suscipit molestiae natus labore voluptas perspiciatis? Molestias architecto quis tenetur, dignissimos laudantium repudiandae? Numquam temporibus error reprehenderit delectus accusantium quae a quibusdam officiis fuga dolore quam sit et, sed itaque iste beatae commodi, nisi, culpa cumque alias ipsa. Amet animi deserunt id molestias vitae? Dolor, recusandae!</p>
+    </section>
+
+    
+    <script>
+        let mainNav = document.getElementById('js-menu');
+        let navBarToggle = document.getElementById('js-navbar-toggle');
+
+        navBarToggle.addEventListener('click',  function() {
+            mainNav.classList.toggle('active')
+        })
+    </script>
+</body>
+</html>

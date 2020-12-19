@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/723a04383b.js" crossorigin="anonymous"></script>
+    <title>Practice- Navbar</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Josefin sans',sans-serif;            
+        }
+        nav {
+            background: #151515;
+            padding: 5px 40px;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+        nav ul li{
+            text-decoration: none;
+            padding: 16px 0;
+            font-size: 24px;
+            margin:  0 16px;
+        }
+        nav ul li.items{
+            position: relative;
+            font-size: 24px;
+            text-align: center;
+            order: 3;
+            transition: all .3s ease;
+        }
+        nav ul li.items:hover{
+            color: cyan;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: rgba(245,245,245,0.9);
+        }
+        nav ul li:hover a{
+            color: cyan;
+        }
+        nav ul li.logo{
+            flex: 1;
+            font-size: 28px;
+            user-select: none;
+            cursor: default;
+            color: #fff;
+        }
+        nav ul li.btn{
+            display: none;
+        }
+
+        @media all and (max-width:900px){
+        nav ul li.items{
+            display: none;
+            width: 100%;
+        }
+        nav ul li.items.show{
+            display: block;
+            }
+        nav ul li.btn{
+            display: block;
+        }
+
+    }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul id="mainList">
+            <li class="logo">Mrlanre</li>
+            <li class="items"><a href="#">Home</a></li>
+            <li class="items"><a href="#">Contact</a></li>
+            <li class="items"><a href="#">Blog</a></li>
+            <li class="items"><a href="#">About</a></li>
+            <li class="items"><a href="#">Feedback</a></li>
+            <li class="btn" id="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
+        </ul>
+    </nav>
+
+    <script>
+        function classToggle(){
+            const items = document.querySelectorAll('.items')
+            const lists = document.querySelectorAll('ul li')
+            items.forEach( item => item.classList.toggle('show'))
+            lists.forEach( list => list.classList.toggle('hide'))
+        }
+        const btn = document.querySelector('.btn')
+        btn.addEventListener('click',classToggle)
+    </script>
+</body>
+</html>
